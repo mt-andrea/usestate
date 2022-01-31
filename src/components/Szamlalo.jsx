@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 
-function Szamlalo() {
+function Szamlalo(props) {
 
   const [count, setCount]=useState(0)
 
   function novel() {
-    setCount(count+1)
+    setCount(count+parseInt( props.inc))
   }
 
 function csokkent() {
-  setCount(count-1)
+  setCount(count-parseInt(props.inc))
 }
 
 function zero() {
